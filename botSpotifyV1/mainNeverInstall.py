@@ -31,6 +31,8 @@ def iniciarEscritorio():
     global acciones
     global cuenta
     global ACC_NAME
+    global time_start
+    time_start=time.time()
     
     returnEsperarAplicacion = acciones.esperarAplicacion()
     pyautogui.screenshot(os.path.join(pathImg,f"02.1-{cuenta}-{returnEsperarAplicacion}.png"))
@@ -97,7 +99,7 @@ def iniciarEscritorio():
                         pyautogui.click(x=500,y=300)
                         pyautogui.click(x=550,y=330)
                         pyautogui.screenshot(os.path.join(pathImg,f"{cuenta}-{str(datetime.datetime.now().strftime('%H-%M-%S'))}.png"))
-                        acciones.sleep(180)
+                        acciones.sleep(430)
                         
                     else:
                         #pyautogui.screenshot(os.path.join(pathImg,f"04.0-{cuenta}.png"))
