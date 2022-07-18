@@ -109,7 +109,7 @@ def iniciarEscritorio():
                         pyautogui.screenshot(os.path.join(pathImg,f"{cuenta}-7minutosscreen-{str(datetime.datetime.now().strftime('%H-%M-%S'))}.png"))
                         break
                 pyautogui.screenshot(os.path.join(pathImg,f"04.1-{cuenta}.png"))
-
+                time.sleep(240)
                 iniciarEscritorio()
             else:
                 iniciarEscritorio()
