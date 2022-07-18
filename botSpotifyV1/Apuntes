@@ -1,4 +1,5 @@
-sudo rm -r bs00PAIS && git clone https://github.com/lips1982/bs00PAIS.git && chmod +x bs00PAIS && cd bs00PAIS && chmod +x inicio.sh && ./inicio.sh
+sudo rm -r 
+sudo su bs00PAIS && git clone https://github.com/lips1982/bs00PAIS.git && chmod +x bs00PAIS && cd bs00PAIS && chmod +x inicio.sh && ./inicio.sh
 
 cd bs00PAIS && chmod +x inicio.sh && ./inicio.sh
 
