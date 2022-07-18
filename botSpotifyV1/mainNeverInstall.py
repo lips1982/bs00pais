@@ -94,17 +94,19 @@ def iniciarEscritorio():
                 acciones.sleep(5)
 
                 while True:
-                    returnClickIconoSettings = acciones.clickIconoSettings()
+                    #returnClickIconoSettings = acciones.clickIconoSettings()
+                    returnClickIconoSettings = True
                     if returnClickIconoSettings:
-                        pyautogui.click(x=500,y=300)
-                        pyautogui.click(x=550,y=330)
+                        #pyautogui.click(x=500,y=300)
+                        #pyautogui.click(x=550,y=330)
                         pyautogui.screenshot(os.path.join(pathImg,f"{cuenta}-{str(datetime.datetime.now().strftime('%H-%M-%S'))}.png"))
-                        acciones.sleep(430)
+                        acciones.sleep(60)
                         
                     else:
                         #pyautogui.screenshot(os.path.join(pathImg,f"04.0-{cuenta}.png"))
                         break
-
+                    if time.time()-time_start>=420:
+                        pyautogui.screenshot(os.path.join(pathImg,f"{cuenta}-7minutosscreen-{str(datetime.datetime.now().strftime('%H-%M-%S'))}.png"))
                 pyautogui.screenshot(os.path.join(pathImg,f"04.1-{cuenta}.png"))
 
                 iniciarEscritorio()
