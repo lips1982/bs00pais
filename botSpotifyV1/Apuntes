@@ -4,6 +4,16 @@ bs00PAIS && git clone https://github.com/lips1982/bs00PAIS.git && chmod +x bs00P
 
 cd bs00PAIS && chmod +x inicio1.sh && ./inicio1.sh
 
+function ClickConnect() {
+  console.log('Working')
+ document.querySelector('button[spotlight-id="devshell-web-preview-button"]').click();
+}
+
+
+function ClickConnect() {
+  console.log('Working')
+ document.querySelector('button[spotlight-id="devshell-web-preview-button"]').click();
+}
 
 
 --> Docker google
