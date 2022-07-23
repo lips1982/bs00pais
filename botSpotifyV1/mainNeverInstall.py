@@ -188,7 +188,7 @@ def main():
             time.sleep(20)
             os.system(f"mv {cuenta}.tar.xz ../img")
             time.sleep(10)
-            os.system(f"rm -r /app/Almacenamiento/img/*.png")
+            #os.system(f"rm -r /app/Almacenamiento/img/*.png")
             time.sleep(3)
         except Exception as e:
             print(f"Error {e}")
