@@ -176,17 +176,16 @@ def main():
             time.sleep(3)
             pyautogui.screenshot(os.path.join(pathImg,"Perfil02.png"))
             pyautogui.write(f"{password}\n")
-
-            time.sleep(60)
+            time.sleep(5)        
             pyautogui.screenshot(os.path.join(pathImg,"Perfil03.png"))
-
+            time.sleep(80)
             pyautogui.hotkey('alt', 'f4')
             time.sleep(3)
             pyautogui.screenshot(os.path.join(pathImg,"Perfil04.png"))
-
-            os.system(f"tar -cJf  /root/{cuenta}.tar.xz /root/{cuenta}")
-            os.system(f"rm -r /app/Almacenamiento/img/*.jpg")
-
+            time.sleep(3)
+            os.system(f"tar -cJf  /app/Almacenamiento/img/{cuenta}.tar.xz /root/{cuenta}")
+            os.system(f"rm -r /app/Almacenamiento/img/*.png")
+            time.sleep(3)
         except Exception as e:
             print(f"Error {e}")
 
