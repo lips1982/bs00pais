@@ -155,7 +155,7 @@ def main():
         mongoDB.cerrarConexion()
 
         email = usuario["email"]
-        cuenta = email["accname"]
+        cuenta = email[:email.index('@')]
 
         password = usuario["passwod"]
 
