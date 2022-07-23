@@ -185,7 +185,7 @@ def main():
             time.sleep(3)
             #os.system(f"cd /root")
             #os.system(f"")
-            os.system(f"cd /root && tar -Jcvf {cuenta}.tar.xz {cuenta}")
+            os.system(f"cd root && tar -Jcvf {cuenta}.tar.xz {cuenta}")
             #os.system(f"tar -Jcvf {cuenta}.tar.xz {cuenta}")
             time.sleep(80)
             os.system(f"mv /root/{cuenta}.tar.xz /app/Almacenamiento/img")
