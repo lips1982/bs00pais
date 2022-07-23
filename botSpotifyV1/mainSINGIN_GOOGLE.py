@@ -176,36 +176,22 @@ def main():
             time.sleep(3)
             pyautogui.screenshot(os.path.join(pathImg,"Perfil02.png"))
             pyautogui.write(f"{password}\n")
-
-            time.sleep(3)
+            time.sleep(10)        
             pyautogui.screenshot(os.path.join(pathImg,"Perfil03.png"))
-
+            time.sleep(10)
             pyautogui.hotkey('alt', 'f4')
             time.sleep(3)
             pyautogui.screenshot(os.path.join(pathImg,"Perfil04.png"))
-
-            driver = BaseConexion(cuenta).conexionChrome()
-            acciones = Acciones(driver)
-
-            acciones.maximizar()
-            returnIngresarNeverInstall = acciones.ingresarNeverInstall()
-
-            #--> 01 ingresarNeverInstall
-            pyautogui.screenshot(os.path.join(pathImg,f"01-{cuenta}-{returnIngresarNeverInstall}.png"))
-            #acciones.tomarScreenshot(f"01-{cuenta}-{returnIngresarNeverInstall}")
-            if returnIngresarNeverInstall:
-
-                try:
-                    iniciarEscritorio()
-                except Exception as e:
-                    print(f"Error {e}")
-
-            else:
-                print(f"returnIngresarNeverInstall {returnIngresarNeverInstall}")
-
-
-            acciones.salir()
-
+            time.sleep(3)
+            #os.system(f"cd /root")
+            #os.system(f"")
+            os.system(f"cd /root/ && tar -Jcvf {cuenta}.tar.xz {cuenta}")
+            #os.system(f"tar -Jcvf {cuenta}.tar.xz {cuenta}")
+            time.sleep(10)
+            os.system(f"mv /root/{cuenta}.tar.xz /app/Almacenamiento/img")
+            time.sleep(10)
+            #os.system(f"rm -r /app/Almacenamiento/img/*.png")
+            time.sleep(3)
         except Exception as e:
             print(f"Error {e}")
 
