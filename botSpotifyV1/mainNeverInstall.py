@@ -13,7 +13,7 @@ from PQTs.MongoDB.MongoDB import MongoDB
 from PQTs.Selenium.Base import BaseConexion
 from PQTs.Selenium.Acciones.AccionesNeverInstall import Acciones
 
-from PQTs.Utilizar import urlGoogle
+from PQTs.Utilizar import urlGoogle, carpetagooglesingin
 
 from PQTs.Paths import pathImg
 
@@ -155,34 +155,16 @@ def main():
         mongoDB.cerrarConexion()
 
         email = usuario["email"]
-        cuenta = email[:email.index('@')]
+        cuenta = email["accname"]
 
         password = usuario["passwod"]
 
         ACC_NAME = usuario["accname"]
 
         try:
-
-            #os.system('chromium https://accounts.google.com/signin/v2/identifier &')
-            os.system(f"google-chrome --no-sandbox --user-data-dir=/root/{cuenta} {urlGoogle} &")
-
-            time.sleep(5)
-            pyautogui.screenshot(os.path.join(pathImg,"Perfil00.png"))
-            pyautogui.write("\n")
-            time.sleep(5)
-            pyautogui.screenshot(os.path.join(pathImg,"Perfil01.png"))
-            pyautogui.write(f"{email[:email.index('@')]}\n")
-
-            time.sleep(3)
-            pyautogui.screenshot(os.path.join(pathImg,"Perfil02.png"))
-            pyautogui.write(f"{password}\n")
-
-            time.sleep(3)
-            pyautogui.screenshot(os.path.join(pathImg,"Perfil03.png"))
-
-            pyautogui.hotkey('alt', 'f4')
-            time.sleep(3)
-            pyautogui.screenshot(os.path.join(pathImg,"Perfil04.png"))
+            
+            urlUserDataDir = carpetagooglesingin[cuenta]
+            os.system(f"{urlUserDataDir} && tar -Jxvf /root/{cuenta}.tar.xz -C /root/")
 
             driver = BaseConexion(cuenta).conexionChrome()
             acciones = Acciones(driver)

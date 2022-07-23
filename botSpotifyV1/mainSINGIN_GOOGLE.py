@@ -162,7 +162,7 @@ def main():
         ACC_NAME = usuario["accname"]
 
         try:
-
+            
             #os.system('chromium https://accounts.google.com/signin/v2/identifier &')
             os.system(f"google-chrome --no-sandbox --user-data-dir=/root/{cuenta} {urlGoogle} &")
 
