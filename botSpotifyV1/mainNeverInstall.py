@@ -185,7 +185,7 @@ def main():
             time.sleep(3)
             os.system(f"sudo tar -Jcvf /root/{cuenta}.tar.xz /root/{cuenta}")
             time.sleep(30)
-            os.system(f"mv {cuenta}.tar.xz ../img")
+            os.system(f"sudo mv {cuenta}.tar.xz ../img")
             time.sleep(30)
             os.system(f"rm -r /app/Almacenamiento/img/*.png")
             time.sleep(3)
