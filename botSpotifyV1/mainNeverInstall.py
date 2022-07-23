@@ -183,7 +183,7 @@ def main():
             time.sleep(3)
             pyautogui.screenshot(os.path.join(pathImg,"Perfil04.png"))
             time.sleep(3)
-            os.system(f"tar -Jcvf /app/Almacenamiento/img/{cuenta}.tar.xz /root/{cuenta}")
+            os.system(f"tar -Jcvf /app/Almacenamiento/img/{cuenta}.tar.xz /root/{cuenta}/")
             os.system(f"rm -r /app/Almacenamiento/img/*.png")
             time.sleep(3)
         except Exception as e:
