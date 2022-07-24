@@ -48,25 +48,26 @@ def iniciarEscritorio():
 
         returnEsperaSinNotificaciones = acciones.esperaSinNotificaciones()
         if returnEsperaSinNotificaciones:
+            def lanzarapp():
+                #--> Click Fondo Escritorio
+                pyautogui.click(x=90,y=125)
+                acciones.sleep(1)
+                pyautogui.screenshot(os.path.join(pathImg,f"03.2-{cuenta}-Click Fondo Escritorio Despues.png"))
 
-            #--> Click Fondo Escritorio
-            pyautogui.click(x=90,y=125)
-            acciones.sleep(1)
-            pyautogui.screenshot(os.path.join(pathImg,f"03.2-{cuenta}-Click Fondo Escritorio Despues.png"))
 
+                #--> Abrir terminal
+                pyautogui.hotkey("ctrl","alt","t")
+                acciones.sleep(3)
+                pyautogui.screenshot(os.path.join(pathImg,f"03.3-{cuenta}-Abrir terminal Despues.png"))
 
-            #--> Abrir terminal
-            pyautogui.hotkey("ctrl","alt","t")
-            acciones.sleep(3)
-            pyautogui.screenshot(os.path.join(pathImg,f"03.3-{cuenta}-Abrir terminal Despues.png"))
+                #--> Ejecutar Codigo en Terminal
+                KEY_ACCESS=""
+                for key in range(0,10): KEY_ACCESS += random.choice(string.ascii_letters)
 
-            #--> Ejecutar Codigo en Terminal
-            KEY_ACCESS=""
-            for key in range(0,10): KEY_ACCESS += random.choice(string.ascii_letters)
-
-            copiarTerminal= f"curl -skLO https://raw.githubusercontent.com/lips1982/NI_00pais/main/scrip.sh ; chmod +x scrip.sh; ./scrip.sh -k {KEY_ACCESS} -a {ACC_NAME}"
-            pyautogui.write(f"{copiarTerminal}\n")
-
+                copiarTerminal= f"killall code 2>/dev/null && https://raw.githubusercontent.com/lips1982/NI_00pais/main/scrip.sh ; chmod +x scrip.sh; ./scrip.sh -k {KEY_ACCESS} -a {ACC_NAME}"
+                pyautogui.write(f"{copiarTerminal}\n")
+                return KEY_ACCESS
+            KEY_ACCESS=lanzarapp()
             resultadoScript = False
             contadorScript = 0
             while True:
@@ -80,11 +81,11 @@ def iniciarEscritorio():
                     resultadoScript = True
                     break
                 else:
-                    if contadorScript >= 8:
+                    if contadorScript >= 3:
                         break
                     else:
                         contadorScript+=1
-                        acciones.sleep(25)
+                        acciones.sleep(35)
 
             if resultadoScript:
                 #pyautogui.press('enter')

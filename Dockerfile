@@ -5,7 +5,7 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
     xvfb xserver-xephyr xauth python3-tk python3-dev \
-    ca-certificates scrot \
+    ca-certificates cdscrot \
     xz-utils
     
 #RUN chromium chromium-driver
