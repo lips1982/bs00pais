@@ -32,7 +32,7 @@ carpetagooglesingin={
 "azuresilk19" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1h0BV-EsskWVGYCcv50vGvw15EJ7ddviN' -O '/root/azuresilk19.tar.xz'",
 "azuresilk21" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1Q4zN30RPE2izK-XvOtdouvok3rNbW-6D' -O '/root/azuresilk21.tar.xz'",
 "azuresilk22" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1z81aSgMaE7ibziVv4Xy7bu4ftFvkVhiW' -O '/root/azuresilk22.tar.xz'",
-"azuresilk23" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1To4Hc7NbUToPW1aJp3a7UNMWFUOOPFJD' -O '/root/azuresilk23.tar.xz'",
+"axuredilk23" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1To4Hc7NbUToPW1aJp3a7UNMWFUOOPFJD' -O '/root/axuredilk23.tar.xz'",
 "azuresilk31" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1wFtbmCp3t9xBoxHfkXwoW93T_kIdEXfk' -O '/root/azuresilk31.tar.xz'",
 "azuresilk32" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1KqOBQeGRcBxT0_wbYVUar3xzFlznqE45' -O '/root/azuresilk32.tar.xz'",
 "azuresilk33" : "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1hJY5S7UthWkIn09lTpay4kW9IPvGrH06' -O '/root/azuresilk33.tar.xz'",
