@@ -85,15 +85,14 @@ def main():
         pyautogui.moveTo(110, 620)
         pyautogui.click(110,620)
         time.sleep(10)
-        pyautogui.screenshot(os.path.join(pathImg,f"{email}.png"))
-        acciones.sleep(10)
-        acciones.enviardatos(email)   
         pyautogui.moveTo(600, 700)
         time.sleep(1)
         pyautogui.moveTo(600, 700)        
         pyautogui.click()         
         acciones.sleep(15)
-     
+        pyautogui.screenshot(os.path.join(pathImg,f"{email}.png"))
+        acciones.sleep(10)
+        acciones.enviardatos(email)        
 
 
     try:
