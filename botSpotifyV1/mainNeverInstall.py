@@ -42,7 +42,7 @@ def main():
         email= (elem["email"])
         id=(elem["_id"])
         passw =(elem["pass"])
-        db.updateOne("accountmanager",id,"acc_estado",2)
+        #db.updateOne("accountmanager",id,"acc_estado",2)
         db.cerrarConexion()
 
     print (email, id,db,passw)
@@ -79,6 +79,9 @@ def main():
         pyautogui.moveTo(74, 430)                
         pyautogui.click(button='right')
         time.sleep(10)
+        pyautogui.screenshot(os.path.join(pathImg,f"{email}.png"))
+        acciones.sleep(15)
+        acciones.enviardatos(email)   
         pyautogui.moveTo(120, 580)
         time.sleep(1)
         pyautogui.moveTo(120, 580)
@@ -89,16 +92,14 @@ def main():
         pyautogui.moveTo(600, 700)        
         pyautogui.click()         
         acciones.sleep(15)
-        pyautogui.screenshot(os.path.join(pathImg,f"{email}.png"))
-        acciones.sleep(15)
-        acciones.enviardatos(email)        
+     
 
 
     try:
         iniciarSpotify (email,passw)
-        db.iniciarDB()
-        db.updateOne("accountmanager",id,"acc_estado",1)
-        db.cerrarConexion()
+        #db.iniciarDB()
+        #db.updateOne("accountmanager",id,"acc_estado",1)
+        #db.cerrarConexion()
 
     except Exception as e:
         with open(os.path.join(pathImg,f"error.txt"), 'w') as f:
